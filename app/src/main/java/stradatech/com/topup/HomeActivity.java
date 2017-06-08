@@ -22,5 +22,14 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(toNetwork);
             }
         });
+
+        findViewById(R.id.add_bal_btn_home).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent toNetwork = new Intent(HomeActivity.this,Network.class);
+                toNetwork.putExtra("function", "Add Bal");
+                startActivity(toNetwork);
+            }
+        });
     }
 }
